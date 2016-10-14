@@ -1,0 +1,21 @@
+{
+    "name": "travis/arrayorderby",
+    "description": "A PHP function to order a multi-dimensional array.",
+    "homepage": "https://github.com/swt83/php-array-orderby",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Scott Travis",
+            "email": "scott.w.travis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "files": [
+            "src/array_orderby.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
