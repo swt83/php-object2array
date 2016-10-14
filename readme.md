@@ -1,6 +1,6 @@
 # Array OrderBy
 
-A PHP function to safely extract information from a multi-dimensional object or array.
+A PHP function to order a multi-dimensional array.
 
 ## Install
 
