@@ -2,32 +2,40 @@
 
 if (!function_exists('object2array'))
 {
-    function object2array($obj, &$arr = array())
+    function object2array($object)
     {
-        // if not valid...
-        if(!is_object($obj) and !is_array($obj))
+        // if not fixable...
+        if(!is_object($object) and !is_array($object))
         {
             // return
-            return $obj;
+            return $object;
         }
 
-        // foreach...
-        foreach ($obj as $key => $value)
-        {
-            if (!empty($value))
-            {
-                $arr[$key] = array();
+        // init
+        $array = array();
 
-                // recursive
-                object2array($value, $arr[$key]);
+        // foreach...
+        foreach ($object as $key => $value)
+        {
+            // if empty...
+            if (empty($value))
+            {
+                // save whatever it is
+                $array[$key] = $value;
             }
+
+            // else NOT empty...
             else
             {
-                $arr[$key] = $value;
+                // prep to split it up
+                $array[$key] = array();
+
+                // recursive function
+                $array[$key] = object2array($value);
             }
         }
 
         // return
-        return $arr;
+        return $array;
     }
 }
