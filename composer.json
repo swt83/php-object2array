@@ -1,7 +1,7 @@
 {
-    "name": "travis/object2array",
+    "name": "travis/objecttoarray",
     "description": "A PHP function to convert a multi-dimension object to an array.",
-    "homepage": "https://github.com/swt83/php-object2array",
+    "homepage": "https://github.com/swt83/php-object-to-array",
     "license": "MIT",
     "authors": [
         {
