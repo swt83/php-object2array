@@ -8,8 +8,6 @@ Normall install via Composer.
 
 ## Usage
 
-I took this code from [StackOverflow](http://stackoverflow.com/questions/13567939/convert-multidimensional-objects-to-array).  It works great.
-
 ```php
 $array = object2array($object);
 ```
