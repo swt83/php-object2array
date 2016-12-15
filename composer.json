@@ -1,7 +1,7 @@
 {
-    "name": "travis/arrayorderby",
-    "description": "A PHP function to order a multi-dimensional array.",
-    "homepage": "https://github.com/swt83/php-array-orderby",
+    "name": "travis/object2array",
+    "description": "A PHP function to convert a multi-dimension object to an array.",
+    "homepage": "https://github.com/swt83/php-object2array",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "files": [
-            "src/array_orderby.php"
+            "src/object2array.php"
         ]
     },
     "minimum-stability": "dev"
