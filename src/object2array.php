@@ -2,7 +2,7 @@
 
 if (!function_exists('object2array'))
 {
-    function object2array($obj, &$arr)
+    function object2array($obj, &$arr = array())
     {
         // if not valid...
         if(!is_object($obj) and !is_array($obj))
@@ -10,9 +10,6 @@ if (!function_exists('object2array'))
             // return
             return $obj;
         }
-
-        // init
-        $arr = array();
 
         // foreach...
         foreach ($obj as $key => $value)
@@ -22,7 +19,7 @@ if (!function_exists('object2array'))
                 $arr[$key] = array();
 
                 // recursive
-                objToArray($value, $arr[$key]);
+                object2array($value, $arr[$key]);
             }
             else
             {
