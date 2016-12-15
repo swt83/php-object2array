@@ -6,11 +6,10 @@ if (!function_exists('array_orderby'))
 {
     function array_orderby($array, $cols)
     {
-        $array = (array) $array;
         $colarr = array();
         foreach ($cols as $col => $order) {
             $colarr[$col] = array();
-            foreach ($array as $k => $row) { $colarr[$col]['_'.$k] = strtolower(ex($row, $col)); }
+            foreach ($array as $k => $row) { $colarr[$col]['_'.$k] = strtolower($row[$col]); }
         }
         $eval = 'array_multisort(';
         foreach ($cols as $col => $order) {
@@ -22,8 +21,8 @@ if (!function_exists('array_orderby'))
         foreach ($colarr as $col => $arr) {
             foreach ($arr as $k => $v) {
                 $k = substr($k,1);
-                if (!isset($ret[$k])) $ret[$k] = ex($array, $k);
-                $ret[$k][$col] = ex($array, $k.'.'.$col);
+                if (!isset($ret[$k])) $ret[$k] = $array[$k];
+                $ret[$k][$col] = $array[$k][$col];
             }
         }
         return $ret;
