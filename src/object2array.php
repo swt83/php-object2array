@@ -2,7 +2,7 @@
 
 if (!function_exists('object2array'))
 {
-    function objToArray($obj, &$arr)
+    function object2array($obj, &$arr)
     {
         // if not valid...
         if(!is_object($obj) and !is_array($obj))
