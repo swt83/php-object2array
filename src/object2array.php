@@ -11,8 +11,24 @@ if (!function_exists('object2array'))
             return $object;
         }
 
+        // if is object...
+        if (is_object($object))
+        {
+            // if has method toArray()...
+            if (method_exists($object, 'toArray'))
+            {
+                return $object->toArray();
+            }
+
+            // if has method to_array()...
+            if (method_exists($object, 'to_array'))
+            {
+                return $object->to_array();
+            }
+        }
+
         // init
-        $array = array();
+        $array = [];
 
         // foreach...
         foreach ($object as $key => $value)
